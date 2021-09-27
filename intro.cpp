@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 #include "factor.h"
 
 using namespace std;
@@ -7,8 +7,6 @@ using namespace std;
 // int num();
 
 //TODO: Call by Pointer
-
-
 
 // void swap(int *a, int *b){
 //     int temp = *a;
@@ -22,9 +20,11 @@ int main(int argc, char const *argv[])
     // cout << x << " / " << y << endl;
     // swap(&x, &y);
     // cout << x << " / "<< y <<endl;
+    typedef int num;
+
+    num val = 6;
 
     cout <<factorial(3);
-
 
     // num();
     // int a, b;
@@ -87,6 +87,6 @@ int main(int argc, char const *argv[])
 //     int num;
 //     cout <<"Enter a number"<<endl;
 //     cin>>num;
-//     cout<<"the number you entered is "<<num<<endl;
+//     cout<<"the :number you entered is "<<num<<endl;
 //     return num;
 // }
