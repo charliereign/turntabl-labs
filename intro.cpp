@@ -1,4 +1,5 @@
-#include<iostream>
+#include <iostream>
+#include "factor.h"
 
 using namespace std;
 
@@ -7,19 +8,7 @@ using namespace std;
 
 //TODO: Call by Pointer
 
-//TODO: FACTORIAL
-int factorial(int n){
-    if (n == 0)
-    {
-        return 1;
-    }
-    int facto = 1;
-    for (int i = 1; i <= n; i++)
-    {
-       facto *= i;
-    }
-    return facto;
-}
+
 
 // void swap(int *a, int *b){
 //     int temp = *a;
@@ -35,6 +24,7 @@ int main(int argc, char const *argv[])
     // cout << x << " / "<< y <<endl;
 
     cout <<factorial(3);
+
 
     // num();
     // int a, b;
