@@ -1,4 +1,5 @@
 #include<iostream>
+#include "factor.h"
 
 using namespace std;
 
@@ -6,20 +7,6 @@ using namespace std;
 // int num();
 
 //TODO: Call by Pointer
-
-//TODO: FACTORIAL
-int factorial(int n){
-    if (n == 0)
-    {
-        return 1;
-    }
-    int facto = 1;
-    for (int i = 1; i <= n; i++)
-    {
-       facto *= i;
-    }
-    return facto;
-}
 
 // void swap(int *a, int *b){
 //     int temp = *a;
@@ -33,6 +20,9 @@ int main(int argc, char const *argv[])
     // cout << x << " / " << y << endl;
     // swap(&x, &y);
     // cout << x << " / "<< y <<endl;
+    typedef int num;
+
+    num val = 6;
 
     cout <<factorial(3);
 
@@ -88,6 +78,7 @@ int main(int argc, char const *argv[])
     // }
 
     
+    
 
     
 }
@@ -97,6 +88,6 @@ int main(int argc, char const *argv[])
 //     int num;
 //     cout <<"Enter a number"<<endl;
 //     cin>>num;
-//     cout<<"the number you entered is "<<num<<endl;
+//     cout<<"the :number you entered is "<<num<<endl;
 //     return num;
 // }
