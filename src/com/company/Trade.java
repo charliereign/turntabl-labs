@@ -30,6 +30,10 @@ public class Trade {
         return price;
     }
 
+    public boolean isPositive(double price){
+        return getPrice() > 0;
+    }
+
     @Override
     public String toString() {
         return "Trade{" +

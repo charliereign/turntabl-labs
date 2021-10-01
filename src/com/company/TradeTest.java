@@ -7,7 +7,7 @@ class TradeTest {
     @org.junit.jupiter.api.Test
     void setPrice() {
         Trade trade = new Trade();
-        trade.setPrice(25);
+        assertFalse(trade.isPositive(trade.getPrice()));
     }
 
     @org.junit.jupiter.api.Test
