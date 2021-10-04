@@ -32,7 +32,7 @@ public class Trade {
     }
 
     public void setPrice(double price) {
-//        if (price < 0) throw new IllegalArgumentException();
+        if (price < 0) throw new IllegalArgumentException();
         this.price = price;
     }
 
