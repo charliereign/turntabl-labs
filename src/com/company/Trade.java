@@ -1,9 +1,10 @@
 package com.company;
 
 public class Trade {
-    private String id,symbol;
+    private String id, symbol;
     private int quantity;
     private double price;
+
 
     public Trade(){
         this("T1","AAPL",100,15.25);
@@ -15,6 +16,14 @@ public class Trade {
         quantity = qty;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     public Trade(String t_id, String sym, int qty, double pri){
         id = t_id;
         symbol = sym;
@@ -23,7 +32,8 @@ public class Trade {
     }
 
     public void setPrice(double price) {
-        this.price = price > 0 ? price : 15.25;
+//        if (price < 0) throw new IllegalArgumentException();
+        this.price = price;
     }
 
     public double getPrice() {
@@ -34,6 +44,8 @@ public class Trade {
         return getPrice() > 0;
     }
 
+
+
     @Override
     public String toString() {
         return "Trade{" +
@@ -43,4 +55,10 @@ public class Trade {
                 ", price=" + price +
                 '}';
     }
+
+
+
+
+
+
 }
