@@ -1,19 +1,22 @@
 package com.company;
 
 public class Trade {
-    private String id, symbol;
+    private final String id;
+    private final String symbol;
     private int quantity;
     private double price;
 
-
-    public Trade(){
-        this("T1","AAPL",100,15.25);
+    public Trade(String id, String symbol, int quantity) {
+        this.id = id;
+        this.symbol = symbol;
+        this.quantity = quantity;
     }
 
-    public Trade(String t_id, String sym, int qty){
-        id = t_id;
-        symbol = sym;
-        quantity = qty;
+    public Trade(String id, String symbol, int quantity, double price) {
+        this.id = id;
+        this.symbol = symbol;
+        this.quantity = quantity;
+        this.price = price;
     }
 
     public int getQuantity() {
@@ -22,13 +25,6 @@ public class Trade {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
-
-    public Trade(String t_id, String sym, int qty, double pri){
-        id = t_id;
-        symbol = sym;
-        quantity = qty;
-        price = pri > 0 ? pri : 15.25;
     }
 
     public void setPrice(double price) {
@@ -40,10 +36,9 @@ public class Trade {
         return price;
     }
 
-    public boolean isPositive(double price){
+    public boolean isPositive(double price) {
         return getPrice() > 0;
     }
-
 
 
     @Override
@@ -55,10 +50,4 @@ public class Trade {
                 ", price=" + price +
                 '}';
     }
-
-
-
-
-
-
 }
